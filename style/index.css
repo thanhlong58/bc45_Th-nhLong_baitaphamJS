@@ -2,18 +2,68 @@
    display: none;
 }
 
-.container .bai-1 span i {
+.bai-1 span i {
    font-size: 35px;
 }
 
-.container .bai-2 span i {
+ .bai-2 span i {
    font-size: 35px;
 }
 
-.container .bai-3 span i {
+ .bai-3 span i {
    font-size: 35px;
 }
 
-.container .bai-4 span i {
+ .bai-4 span i {
    font-size: 35px;
 }
+
+
+
+/*
+
+tabs
+*/
+
+
+/* Style the tab */
+.tab {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+   border: 1px solid #ccc;
+   background-color: #f1f1f1;
+ }
+ 
+ /* Style the buttons that are used to open the tab content */
+ .tab button {
+   background-color: inherit;
+   float: left;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   padding: 14px 16px;
+   transition: 0.3s;
+ }
+ 
+ /* Change background color of buttons on hover */
+ .tab button:hover {
+   background-color: #ddd;
+ }
+ 
+ /* Create an active/current tablink class */
+ .tab button.active {
+   background-color: #ccc;
+ }
+ 
+ /* Style the tab content */
+ .tabcontent {
+   display: none;
+   padding: 6px 12px;
+   border: 1px solid #ccc;
+   border-top: none;
+ }
+
+
+ 

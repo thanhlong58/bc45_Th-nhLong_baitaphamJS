@@ -28,13 +28,16 @@
 </head>
 
 <body>
+    <!-- Tab links -->
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'bai-1')">Bài 1</button>
+        <button class="tablinks" onclick="openCity(event, 'bai-2')">Bài 2</button>
+        <button class="tablinks" onclick="openCity(event, 'bai-3')">Bài 3</button>
+        <button class="tablinks" onclick="openCity(event, 'bai-4')">Bài 4</button>
+    </div>
 
-
-
-
-    <div class="container">
-
-
+    <!-- Tab content -->
+    <div id="bai-1" class="tabcontent">
         <div class="bai-1">
             <h3 class="d-inline">bai tap 1: Tính điểm chuẩn</h3><span><i class="fa fa-user-graduate"></i></span>
 
@@ -99,8 +102,23 @@
 
 
 
-        <hr>
 
+
+
+
+
+
+
+
+    </div>
+
+
+    </div>
+
+
+    </div>
+
+    <div id="bai-2" class="tabcontent">
         <div class="bai-2">
             <h3 class="d-inline">Bài 2: tính tiền điện</h3><span><i class="las la-plug"></i></span>
             <div class="col-6 form-group">
@@ -114,100 +132,94 @@
                 <input type="text" class="w-25 form-control" id="so-kw">
 
             </div>
-        </div>
-
-        <button class="btn btn-danger my-2" id="btnTinh">Tính tiền điện</button>
-
-        <div class="alert alert-dark" id="ket-qua-b2">
-
-        </div>
 
 
-        <hr>
-    <div class="bai-3">
-        <h3 class="d-inline"> bai3 :Tính thuế thu nhập cá nhân</h3><span><i class="fa fa-business-time"></i></span>
+            <button class="btn btn-danger my-2" id="btnTinh">Tính tiền điện</button>
 
-        <div class="row">
-            <div class="col-4 form-group">
-                <p>Nhập họ tên</p>
-                <input type="text" class="form-control" id="ho-ten">
-
-            </div>
-            <div class="col-4 form-group">
-                <p>Tổng thu nhập năm</p>
-                <input type="text" class="form-control" id="thu-nhap-nam">
-
-            </div>
-
-            <div class="col-4 form-group">
-                <p>Số người phụ thuộc </p>
-                <input type="text" class="form-control" id="depend">
-
-
-
-            </div>
-
+            <div class="alert alert-dark" id="ket-qua-b2"></div>
 
         </div>
 
-        <button class="btn btn-dark my-2" id="btnTinhThue">Tính thuế thu nhập cá nhân</button>
-        <div class="alert alert-danger" id="ket-qua-b3">
+
+    </div>
+
+    <div id="bai-3" class="tabcontent">
+        <div class="bai-3">
+            <h3 class="d-inline"> bai3 :Tính thuế thu nhập cá nhân</h3><span><i class="fa fa-business-time"></i></span>
+
+            <div class="row">
+                <div class="col-4 form-group">
+                    <p>Nhập họ tên</p>
+                    <input type="text" class="form-control" id="ho-ten">
+
+                </div>
+                <div class="col-4 form-group">
+                    <p>Tổng thu nhập năm</p>
+                    <input type="text" class="form-control" id="thu-nhap-nam">
+
+                </div>
+
+                <div class="col-4 form-group">
+                    <p>Số người phụ thuộc </p>
+                    <input type="text" class="form-control" id="depend">
+
+
+
+                </div>
+
+
+            </div>
+
+            <button class="btn btn-dark my-2" id="btnTinhThue">Tính thuế thu nhập cá nhân</button>
+            <div class="alert alert-danger" id="ket-qua-b3">
+
+            </div>
 
         </div>
 
     </div>
 
+    <div id="bai-4" class="tabcontent">
+        <div class="bai-4">
+            <h3 class="d-inline">bài 4: Tính tiền cap</h3><span><i class="fa fa-tv"></i></span>
 
+            <div class="row">
+                <div class="col-4">
+                    <select name="" id="loai-khach">chọn loại khách hàng
+                        <option value="">chọn loại khách hàng</option>
+                        <option value="nha-dan" id="nha-dan">Nhà dân</option>
+                        <option value="doanh-nghiep" id="doanh-nghiep">Doanh Nghiệp</option>
 
+                    </select>
+                </div>
 
-    <div class="bai-4">
-        <h3 class="d-inline">bài 4: Tính tiền cap</h3><span><i class="fa fa-tv"></i></span>
+                <div class="col-4">
+                    <p>Nhập mã khách hàng</p>
+                    <input type="text" class="form-control w-25 d-inline" id="ma-khach-hang">
 
-        <div class="row">
-            <div class="col-4">
-                <select name="" id="loai-khach">chọn loại khách hàng
-                    <option value="">chọn loại khách hàng</option>
-                    <option value="nha-dan" id="nha-dan">Nhà dân</option>
-                    <option value="doanh-nghiep" id="doanh-nghiep">Doanh Nghiệp</option>
+                </div>
 
-                </select>
+                <div class="col-4">
+                    <p>Số kênh cao cấp</p>
+                    <input type="text" class="form-control w-25 d-inline" id="so-kenh-cao-cap">
+
+                </div>
+            </div>
+            <div>
+                <input class="form-control w-25 " type="text" placeholder="Số kết nối" id="so-ket-noi">
             </div>
 
-            <div class="col-4">
-                <p>Nhập mã khách hàng</p>
-                <input type="text" class="form-control w-25 d-inline" id="ma-khach-hang">
+            <button class="btn btn-primary my-2" id="btnTinhTienCap">Tính tiền cap</button>
+
+            <div class="alert alert-success" id="ket-qua-b4">
 
             </div>
 
-            <div class="col-4">
-                <p>Số kênh cao cấp</p>
-                <input type="text" class="form-control w-25 d-inline" id="so-kenh-cao-cap">
-
-            </div>
-        </div>
-        <div>
-            <input class="form-control w-25 " type="text" placeholder="Số kết nối" id="so-ket-noi">
         </div>
 
-        <button class="btn btn-primary my-2" id="btnTinhTienCap">Tính tiền cap</button>
-
-        <div class="alert alert-success" id="ket-qua-b4">
-
-        </div>
-
-    </div>
 
 
-    </div>
-
-
-
-
-
-
-
-
-    
+        <div class="container">
 
 
 
@@ -217,13 +229,24 @@
 
 
 
-    <!--js boostrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
 
-    <!--js-->
-    <script src="/js/index.js"></script>
+
+
+
+
+
+
+
+
+
+
+            <!--js boostrap-->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+                crossorigin="anonymous"></script>
+
+            <!--js-->
+            <script src="/js/index.js"></script>
 </body>
 
 </html>
